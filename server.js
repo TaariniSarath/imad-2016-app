@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var articles={
    'article-one': {
           title: 'Article-one', 
-          heading: 'Aticle-one',
+          heading: 'Article-one',
           date: '18 Sept 2016',
           content: `
                      <p>
@@ -23,7 +23,7 @@ var articles={
                     },
    'article-two':{
           title: 'Article-Two', 
-          heading: 'Aticle-Two',
+          heading: 'Article-Two',
           date: '19 Sept 2016',
           content: `
                      <p>
@@ -32,7 +32,7 @@ var articles={
                     `},
    'article-three':{
      title: 'Article-Three', 
-          heading: 'Aticle-Three',
+          heading: 'Article-Three',
           date: '20 Sept 2016',
           content: `
                      <p>
@@ -52,7 +52,7 @@ var htmlTemplate=
 <head>
     <title>
         ${title}
-        </title>
+    </title>
         <meta name="viewport" content="width-device-width initial-scale-1" />
         <link href="/ui/style.css" rel="stylesheet" />
 </head>
@@ -85,8 +85,6 @@ app.get('/:articleName', function (req,res){
     var articleName= req.param.articleName;
     res.send(createTemplate(articles[articleName]));
 });
-
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));

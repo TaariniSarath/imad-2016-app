@@ -20,3 +20,16 @@ body {
     height: 200px;
 }
 
+.container{
+        
+    max-width: 800px;
+    color: gray;
+    margin: 0 auto;
+    font-family: ariel;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    }
+    
+
